@@ -1,0 +1,177 @@
+* {
+	margin: 0;
+	padding: 0px;
+}
+
+body {
+	background-image: linear-gradient(rgba(255, 92, 185, 0.1), rgba(255, 92, 185, 0.1)), url('../img/todolistbg1.JPG');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	z-index: 999;
+}
+
+.form-control:focus {
+	border-color: #eee;
+	box-shadow: 0 0 0 0.25rem #fcb19fc8;
+
+}
+
+h1 {
+	font-size: 50px;
+	font-family: "Pacifico", cursive;
+	position: relative;
+	background-image: linear-gradient(to right, #c300ff5e, #ff00007f);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-top: 10px;
+}
+
+h1::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 25%;
+	left: 0;
+	bottom: 5px;
+	background-color: #fc922f51;
+	transition: height 350ms;
+	z-index: -1;
+}
+
+h1:hover::after {
+	height: 50%;
+}
+
+h2 {
+	margin: 30px 0;
+	font-family: "Righteous", cursive;
+	background-image: linear-gradient(to right, #dd00ff, #ff00007f, #04ff00);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.inputs {
+	color: #88304E;
+}
+
+
+.btn-outline-light {
+	background-color: #eeeeee22;
+}
+
+.btn-delete {
+	background-image: linear-gradient(to right, #ff000051, #c300ff76);
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 5px;
+	border: none;
+	padding: 1px 2px;
+	color: #eee;
+	transition: all 0.3s linear;
+}
+
+.btn-delete:hover {
+	color: red;
+	transform: scale(1.1);
+}
+
+.form-control {
+	background-image: linear-gradient(to right, #ECDCBF, #ff000035);
+}
+
+.table>:not(caption)>*>* {
+	background-color: transparent;
+	border-bottom-width: 1px;
+	border-color: #ff0055;
+}
+
+.btn {
+	border: none;
+	color: #88304E;
+	background-image: linear-gradient(to right, #ff000035, #ECDCBF);
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.3s linear;
+
+}
+
+.btn:hover {
+	color: white;
+	transform: scale(1.1);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
+}
+
+.todo-container {
+	width: 95%;
+	margin: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.todo_list ul {
+	list-style: none;
+	padding: 0;
+}
+
+.todo_list ul li label {
+	display: block;
+	position: relative;
+	padding: 0 10px;
+}
+
+.todo_element {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.element_title {
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+	height: 2em;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 2em;
+	position: relative;
+	color: #88304E;
+	letter-spacing: 1px;
+}
+
+.element_title:hover {
+	color: #b100b4;
+}
+/* *******RWD********* */
+@media screen and (max-width: 900px) {
+	.element_title {
+		white-space: normal;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	main {
+		margin: 0;
+		padding: 0;
+	}
+
+	.element_title {
+		line-height: normal;
+		margin: 10px 0px;
+		height: auto;
+	}
+
+	.todo-container {
+		justify-content: space-between;
+		gap: 15px;
+	}
+}
